@@ -14,4 +14,4 @@
 ### COPY
 ### ONBUILD
 
-[Dockerfile reference](https://docs.docker.com/v1.8/reference/builder/)
+[Dockerfile reference](https://docs.docker.com/v1.8/reference/builder)
