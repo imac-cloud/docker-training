@@ -6,5 +6,6 @@
 * **Murano**：為 OpenStack 的應用程式目錄服務（Application Catalog service）專案，由於 Murano 也整合了 Kubernetes 與 Docker 的部署，因此我們可以透過 Murano 來快速部署容器服務。然而 Murano 與 Solum 有關係，Solum 被用來開發應用程式，而 Murano 用來做發佈與部署。
 * **Kolla**：Kolla 比較特殊，它被用來提供基於 Docker 容器的 OpenStack 服務部署與更新升級解決方案，主要將 OpenStack 各服務的粒度縮小到容器級別，並透過 Docker 的特性來快速部署（Pull、Run）。
 * **Kuryr**：Kuryr 主要被用於 OpenStack 提供容器網路服務的專案，它作為 libnetwork 的一個遠程類別驅動，來支援連接 CNM（Container Network Model）與 Neutron 所提供的網路服務。
+* **Docker machine driver**：Docker 的工具 docker-machine 提供支援了 OpenStack 的驅動，我們可以透過通用驅動（Generic Driver）與 OpenStack 驅動（OpenStack Driver）來建立虛擬機並執行 Docker 的引擎。
 
 > 以上不代表全部，詳細會在 OpenStack Project List 中再找出相關專案，並更新到該列表。

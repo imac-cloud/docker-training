@@ -31,7 +31,7 @@ Docker 擁有幾個基本概念，其中包含 Docker 三大重要部分與元�
 
 * **Docker registries**：Registries 是被用來儲存 Docker 所建立的映像檔的地方，我們可以把自己建立的映像檔透過上傳到 Registries 來分享給其他人。Registries 也被分為了公有與私有，一般公有的 Registries 是 [Docker Hub](https://hub.docker.com/)，提供了所有基礎的映像檔與全球使用者上傳的映像檔。私人的則是企業或者個人環境建置的，可參考 [Deploying a registry server](https://docs.docker.com/registry/deploying/)。
 
-Docker 的推出與發展非常迅速，相關的部署工具與資源相繼出現，更因此讓原名為 dotcloud 變成 Docker, Inc。Docker 也在 2015 年推出了以下三大工具：
+Docker 的推出與發展非常迅速，相關的部署工具與資源相繼出現，更因此讓原名為 dotcloud 變成 Docker, Inc。Docker 也在 2014 - 2015 年推出了以下三大工具：
 * **[docker-machine](https://docs.docker.com/machine/overview/)**：Docker machine 是可以透過指令來安裝 Docker engine 的工具。該工具可以讓使用者不需要學習一堆安裝指令來部署容器環境，目前已經支援了許多驅動程式，例如：OpenStack、Amazon EC2、Google Cloud Engine 與 Microsoft Azure等，更可以被用來建立混合環境。
 * **[docker-compose](https://docs.docker.com/compose/overview/)**：Compose 是 Docker 的編配工具，可以用來建置 Swarm 上的多節點容器化叢集與單一節點的應用程式。Compose 的前身是 Fig，使用者可以透過定義 YAML 檔案來描述與維護所有應用程式服務定義與部署，如多個服務之間如何連接等，使用 Compose 部署的應用程式可以在不影響其他服務情況下自動更新。
 * **[docker-swarm](https://docs.docker.com/swarm/overview/)**：Swarm 是 Docker 的原生叢集與調度工具，它基於應用程式生命週期、容器使用、效能需求自動優化分散式應用程式的基礎架構。且 Swarm 可以透過許多服務發現（Service Discovery）套件來打造 HA 的叢集，Swarm 也提供很高的靈活性，使應用程式可以簡單的分散部署在多主機環境上。
