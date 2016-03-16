@@ -38,7 +38,8 @@ Docker 的推出與發展非常迅速，相關的部署工具與資源相繼出�
 
 ## 使用者操作 Docker 的方法
 Docker 主機上會執行一個 Docker daemon，就能夠開啟許多 Container。如果要對 Docker 進行操作的話，可以使用 Docker client 軟體，如 docker client、docker-py、Kitematic，這些工具會分別採用以下兩種方式來對部署 Docker daemon 進行管理：
-1. [UNIX sockets](http://en.wikipedia.org/wiki/Unix_domain_socket)
+
+1. [UNIX Sockets](http://en.wikipedia.org/wiki/Unix_domain_socket)
 2. [RESTful API](http://en.wikipedia.org/wiki/Representational_state_transfer)
 
 溝通方式如下圖所示，其中 Docker daemon 可以同時安裝 Docker client 來直接進行 Docker 使用（一般安裝都會有），詳細資訊可以參閱 [Docker Remote API - Docker Documentation](https://docs.docker.com/reference/api/docker_remote_api/)。

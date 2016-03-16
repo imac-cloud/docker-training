@@ -1,7 +1,4 @@
-# Docker Compose
-Docker Compose 是 Docker 的編配服務，與 Docker nachine、Docker swarm等工具可以互相結合使用，Docker Compose 主要是讓使用者在叢集中部署分散式應用程式，簡單說 Docker Compose 是一個應用層的服務，使用者可以透過撰寫 YAML 檔案來描述容器化應用程式如何被建置與部署，並支援動態的更新應用程式與擴展。
-
-### 安裝 Docker Compose
+# 安裝 Docker Compose
 docker-compose 能夠安裝於 OS X 與 64-bit Lunix 作業系統上，但目前不支援 Windows。在安裝 docker-compse 之前，需要先安裝 docker，請參閱 [Mac OS X installation](https://docs.docker.com/engine/installation/mac/)、[Ubuntu installation](https://docs.docker.com/engine/installation/ubuntulinux/)與[other system installations](https://docs.docker.com/engine/installation/)。完成 docker 安裝後，就可以使用以下方式安裝 docker-compose：
 ```sh
 $ curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
