@@ -43,9 +43,7 @@ Docker 主機上會執行一個 Docker daemon，就能夠開啟許多 Container�
 
 溝通方式如下圖所示，其中 Docker daemon 可以同時安裝 Docker client 來直接進行 Docker 使用（一般安裝都會有），詳細資訊可以參閱 [Docker Remote API - Docker Documentation](https://docs.docker.com/reference/api/docker_remote_api/)。
 
-
 ![溝通方式](images/communication.png)
-
 
 最後有興趣看每週 Docker 的新聞可以訂閱 Docker Weekly，參閱   [Docker Newsletter](https://www.docker.com/newsletter-subscription)
 
