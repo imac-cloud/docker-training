@@ -9,9 +9,7 @@ Magnum 由 OpenStack Container Team 開發的容器編配引擎（Container Orch
 * **Support Docker Swarm auto scale**。
 * **Support Kubernetes HA**。
 
-<div align="center">
 ![](images/magnum-main-func.jpg)
-</div>
 
 目前 OpenStack Magnum 為使用者提供了現今主流的幾個管理容器的叢集系統：
 * **Kubernetes**：Google 開源自動化容器叢集管理系統。
@@ -20,9 +18,7 @@ Magnum 由 OpenStack Container Team 開發的容器編配引擎（Container Orch
 
 Magnum 目前剛在 Liberty 版本正式從孵化專案畢業，許多功能還沒有很完全，但已足夠提供基本需求給使用者。使用者可以透過 Magnum 直接管理 Kubernetes、Docker Swarm 與 Apache Mesos 等叢集。主要透過後台的 COE（Container Orchestration Engine）來與容器叢集系統進行互動取得容器服務。Magnum 架構如下圖所示：
 
-<div align="center">
 ![](images/magnum-arch.jpg)
-</div>
 
 從架構圖可以看到 Magnum 有許多專有名詞，我們將針對一些比較重要的名詞與其功能進行說明。主要有以下：
 * **Bay**：在 Magnum 中 Bay 被用來表示一個叢集單位，比如說建立一個 kubernetes 與 Swarm 的叢集。
