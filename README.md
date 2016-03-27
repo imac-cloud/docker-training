@@ -12,6 +12,7 @@
 * 更有效的使用實體主機資源
 * 可建置任何語言的 Dockerized 應用程式
 * 跨平台的管理、部署與使用
+
 > 微軟過往許多需要相依於 Windows 語言應用程式也慢慢被支援到 Docker 了。
 
 ### Docker Container vs 傳統虛擬化

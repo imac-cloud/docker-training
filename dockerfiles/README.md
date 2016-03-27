@@ -13,5 +13,8 @@
 ### ADD
 ### COPY
 ### ONBUILD
+### LABEL
+### ARG
+### STOPSIGNAL
 
 [Dockerfile reference](https://docs.docker.com/v1.8/reference/builder)
