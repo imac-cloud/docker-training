@@ -1,47 +1,16 @@
 # 指令大全
 Docker 採用與 Git 類似的指令，若有學過 Git 的人，想必對於 Docker 某些指令感到熟悉，以下整理目前 Docker 的所有指令，並依依說明其功能。
 
-以下為 Docker 的所有指令：
-* daemon
-* attach
-* build
-* commit
-* cp
-* create
-* diff
-* events
-* exec
-* export
-* history
-* images
-* import
-* info
-* inspect
-* kill
-* load
-* login
-* logout
-* logs
-* pause
-* port
-* ps
-* pull
-* push
-* rename
-* restart
-* rm
-* rmi
-* run
-* save
-* search
-* start
-* stats
-* stop
-* tag
-* top
-* unpause
-* version
-* wait
+以下為 Docker 的子指令分類：
+
+| 分類名稱     | 指令   |
+|------------|------|
+| 環境資訊     | info、version |
+| 容器管理     | create、kill、exec、pause、restart、rm、start、stop、run、unpause  |
+| 映像檔管理   | build、images、import、load、rmi、save、tag、commit |
+| 映像檔倉庫   | login、logout、pull、push、search   |
+| 容器維護     | attach、export、inspect、port、ps、rename、stats、top、wait、cp、diff  |
+| 系統資訊     | events、history、logs  |
 
 
 # 參考資料

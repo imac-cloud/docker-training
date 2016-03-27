@@ -7,7 +7,7 @@ $ Docker -d -D -e lxc -s btrfs --dns 8.8.8.8 --dns-search example.com
 > 只有手動啟動需要上述指令，如果是自動只需要執行```sudo service docker start``` 即可，OS X 與 Windows 可以安裝 [Docker Toolbox](https://www.docker.com/docker-toolbox)。
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -d | 以服務方式執行 Docker |
 | -D | Debug 模式執行 Docker |
 | -e [option] | 指定執行驅動，預設為 ```libcontainer``` |
@@ -49,7 +49,7 @@ $ docker run -d -p 8080:80 -p 10022:22 --name apache2 kairen/apache2:1.0.0 /bin/
 ```
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -a, --attach=[] | 附加 stdin、stdout 或 stderr 檔案 |
 | -d, --detach | 使容器執行於背景 |
 | -i, --interactive | 開啟互動模式（保持 stdin 檔案在開啟狀態） |
@@ -135,7 +135,7 @@ $ docker ps [options]
 ```
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -a, --all | 顯示所有容器，包含已停止 |
 | -q, --quiet | 只顯示 ID |
 | -s, --size | 顯示容器佔用空間 |
@@ -205,7 +205,7 @@ $ docker commit [options] <CONTAINER> <REPOSITORY:TAG>
 ```
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -p, --pause | 再提交過程中加入暫停（v1.1.1 later） |
 | -m, --message="" | 指定提交的訊息，描述映像檔的用途 |
 | -a, --author="" | 指定映像檔作者資訊 |
@@ -218,7 +218,7 @@ $ docker images | head
 ```
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -a, --all | 顯示所有映像檔，包括中間層 |
 | -f, --filter=[] | 提供篩選功能 |
 | --no-trunc | 不切斷映像檔 ID |
@@ -231,7 +231,7 @@ $ docekr rmi [option] <IMAGE>
 ```
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -f, --force | 強制刪除映像檔 |
 | --no-prune | 不刪除沒標籤的上層映像檔 |
 
@@ -281,7 +281,7 @@ $ docker login [options] [SERVER]
 ```
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -e, --email="" | 指定 Email |
 | -p, --password="" | 指定密碼 |
 | -u, --username="" | 指定帳號 |
@@ -309,7 +309,7 @@ $ docker events [options]
 ```
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | --since="" | 顯示由什麼時間開始的事件 |
 | --until="" | 顯示到什麼時間為止的事件 |
 
@@ -327,7 +327,7 @@ $ docker build -t="kairen/hadoop:2.6.0" .
 > ```.```為 Dockerfile 檔案目錄。
 
 | 選項 | 說明 |
-| -- | -- |
+|------------|------|
 | -t, --tag="" | 這是當建立成功時，映像檔所在檔案庫的名稱 |
 | -q, --quiet | 不輸出訊息，預設為顯示 |
 | --rm=true | 當成功建立後，刪除過程中產生的容器 |
