@@ -66,8 +66,9 @@ NAME        STATUS    AGE
 接著透過部署簡單應用程式來進一步確認正確性：
 ```sh
 $ kubectl run nginx --image=nginx --port=80
-deployment "nginx" created
-$ kubectl expose deployment nginx --port=80
+replicationcontroller "nginx" created
+
+$ kubectl expose rc nginx --port=80
 service "nginx" exposed
 ```
 
@@ -91,7 +92,7 @@ nginx        10.0.0.133   <none>        80/TCP    3m        run=nginx
 
 取得應用程式的 service ip：
 ```sh
-$ ip=$(kubectl get svc nginx --template={{.spec.clusterIP}})
-$ echo $ip
-$ curl 10.0.0.133
+$ IP=$(kubectl get svc nginx --template={{.spec.clusterIP}})
+$ echo ${IP}
+$ curl ${IP}
 ```
