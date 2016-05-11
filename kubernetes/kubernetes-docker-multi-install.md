@@ -12,7 +12,7 @@
 |172.16.1.101|  minion-1  |
 |172.16.1.102|  minion-2  |
 
-在開始安裝前，我們必須在部署的主機或虛擬機安裝與完成安裝 docker 於主機，執行以下指令完成：
+在開始安裝前，我們必須在部署的主機或虛擬機安裝安裝 docker ，執行以下指令：
 ```sh
 $ curl http://files.imaclouds.com/scripts/docker_install.sh | sh
 ```
