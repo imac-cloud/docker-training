@@ -58,6 +58,7 @@ $ vagrant box update
 ```sh
 $ vagrant up
 ```
+> P.S. 這邊建置起來裡面虛擬機還要下載一些東西，要等一下子才會真正完成。
 
 ## 配置 kubectl
 當完成部署後，需要配置 kubectl 連接 API，這邊可以選擇以下兩種的其中一種進行：
@@ -97,4 +98,16 @@ NAME           STATUS                     AGE
 ```sh
 $ vagrant ssh w1
 core@w1 ~ $ journalctl -u kubelet
+```
+
+> 發生```The connection to the server 172.17.4.101:443 was refused - did you specify the right host or port?```的話，請執行以下方式：
+```sh
+$ vagrant suspend
+$ vagrant up
+Bringing machine 'e1' up with 'virtualbox' provider...
+Bringing machine 'c1' up with 'virtualbox' provider...
+Bringing machine 'w1' up with 'virtualbox' provider...
+==> e1: Checking if box 'coreos-beta' is up to date...
+==> e1: Resuming suspended VM...
+...
 ```
