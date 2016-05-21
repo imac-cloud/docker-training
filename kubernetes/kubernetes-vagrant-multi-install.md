@@ -93,3 +93,8 @@ NAME           STATUS                     AGE
 172.17.4.201   Ready                      3m
 172.17.4.202   Ready                      3m
 ```
+> 若有問題可以進入 vagrant 的節點查看，如以下方式：
+```sh
+$ vagrant ssh w1
+core@w1 ~ $ journalctl -u kubelet
+```
