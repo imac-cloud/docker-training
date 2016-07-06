@@ -74,8 +74,8 @@ $ sudo systemctl enable docker
 
 在```所有```節點安裝一些基本工具軟體：
 ```sh
-$ sudo yum install -y tar xz unzip curl ipset vim wget git python-pip
-$ sudo pip install --upgrade pip
+$ sudo yum install -y tar xz unzip curl ipset vim wget git
+$ sudo easy_install pip
 ```
 
 在```Controller```節點，進入 <font color=red>root</font> 使用者，並建置 ssh keys：
