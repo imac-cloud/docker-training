@@ -7,7 +7,7 @@ Kubernetes 提供了許多雲端平台與作業系統的安裝方式，本章將
 
 > 以下為安裝 bridge-utils 與 docker 方法：
  ```sh
-$ sudo apt-get install openvswitch-switch bridge-utils
+$ sudo apt-get install -y openvswitch-switch bridge-utils
 $ curl http://files.imaclouds.com/scripts/docker_install.sh | sh
  ```
 
