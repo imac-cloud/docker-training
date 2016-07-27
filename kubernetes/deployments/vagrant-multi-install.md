@@ -1,4 +1,4 @@
-# Vagrant 與 CoreOS 安裝 Kubernetes
+# Deploying Kubernetes Using Vagrant and CoreOS
 本節將透過 Vagrant 與 CoreOS 來部署多節點的 Kubernetes 叢集，並使用 Kubernetest CLI 工具與 API 進行溝通。
 
 ## 事前準備

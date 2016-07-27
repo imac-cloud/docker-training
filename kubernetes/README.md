@@ -6,7 +6,7 @@ Kubernetes 在 Docker 叢集管理中是很重要的一員，其實作了許多�
 ![](images/kubernets-arch.png)
 
 使用 Kubernetes 的好處，網路上已有許多相關資訊，這邊列舉幾個：
-* 輕易的 scale out/in 容器
+* 輕易的 Scale out/in 容器
 * 自動化容錯與擴展，如容器的部署與副本
 * 以多個容器組成群組，並提供容器負載平衡
 * 容易擴展節點
@@ -26,6 +26,5 @@ Kubernetes 在 Docker 叢集管理中是很重要的一員，其實作了許多�
   * kubelet：為 master 節點的 agent。
   * kube-proxy： Sevice 使用其將服務請求連接路由到 Pod 的容器中。
   * docker engine（或 rocket）：主要建立容器的引擎。
-
 
 * **Master**：每一個 k8s 叢集都會有一個或多個 Master，主要提供 REST APIs、管理 k8s 工具、運行 Etcd 、Scheduler 以及 Pod 的 Replication Controller 等服務。

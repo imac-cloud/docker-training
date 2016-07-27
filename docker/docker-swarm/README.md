@@ -1,6 +1,7 @@
-# Learning how to use Docker SwarmKit
-
+# Docker SwarmKit
 *SwarmKit* 是一個策劃任何分散式系統的工具包，包含節點發現、 raft-based consensus 與任務調度...等功能。
+
+![](images/docker-swarm-arch.png)
 
 其主要行為可分成：
 
@@ -21,12 +22,12 @@
 
 ## 特性
 
-- **服務編排** 
+- **服務編排**
 	- **一致性** : *SwarmKit* 會不斷比對期望狀態與實際狀態，發現兩者不相符時（如：服務擴展、節點失效），則 *SwarmKit* 會自動將服務中的任務調度到其他節點。
-	- **類型** : 目前 *SwarmKit* 支援兩種服務類型 : 
+	- **類型** : 目前 *SwarmKit* 支援兩種服務類型 :
 		- **複製型服務** : *SwarmKit* 會在該節點上啟動預期數量的副本。
 		- **全局服務** : *SwarmKit* 會在叢集上的各個可用節點執行一個任務。
-	- **配置升級** : 任何時候你都可以修改服務的一個或多個配置檔。當你更新完後，*SwarmKit* 會協調期望狀態，確保所有的任務皆已使用期望的設定。預設情況下會同時執行升級。你可以使用不同的方式進行配置 : 
+	- **配置升級** : 任何時候你都可以修改服務的一個或多個配置檔。當你更新完後，*SwarmKit* 會協調期望狀態，確保所有的任務皆已使用期望的設定。預設情況下會同時執行升級。你可以使用不同的方式進行配置 :
 		- **對比** : 定義同一時間可以執行多少的升級項目。
 		- **延遲** : 設定最小更新延遲間隔時間。*SwarmKit* 等待上一個任務關閉後啟動，接著等待狀態為 RUNNING ，再等待額外配置的等待時間，最後，執行後續其他任務。
 	- **重啟策略** : 使用者可自行定義重啟條件、延遲時間、限制（給定時間內最大的嘗試次數）。*SwarmKit* 可以決定在不同機器上重新啟動任務。換句話說，不合適的節點將被排除，不接受任何任務。
@@ -43,14 +44,14 @@
 | worker-1  | 10.26.1.79 |
 
 
-###環境要求 : 
-  
+###環境要求 :
+
   - 已安裝 Docker
 
-###Manager Node 安裝 : 
-  
+###Manager Node 安裝 :
+
 ```
-$ ./manager-node.sh 
+$ ./manager-node.sh
 
 ```
 
@@ -59,7 +60,7 @@ $ ./manager-node.sh
 ###Worker Node 安裝 :
 
 ```
-$ ./worker-node.sh 
+$ ./worker-node.sh
 
 ```
 
@@ -84,7 +85,7 @@ brm3eaxfd2iz9aeqk02ecvihf  worker-1   ACCEPTED    READY   ACTIVE
 
 （啟動之前，確認 `/tmp/node-N` 不存在）
 
-初始化第一個節點 : 
+初始化第一個節點 :
 
 ```
 $ swarmd -d /tmp/node-1 --listen-control-api /tmp/manager1/swarm.sock --hostname node-1
@@ -103,7 +104,7 @@ $ swarmd -d /tmp/node-3 --hostname node-3 --join-addr 127.0.0.1:4242
 
 開啟第四個 terminal ，使用 `swarmctl` 操作與控制叢集。在使用 swarmctl 前，將 `SWARM_SOCKET` 設定到環境變數中，啟動時 manager socket 會被指定到 `--listen-control-api`。
 
-顯示節點列表 : 
+顯示節點列表 :
 
 ```
 $ export SWARM_SOCKET=/tmp/manager1/swarm.sock
@@ -117,14 +118,14 @@ ID             Name    Membership  Status  Availability  Manager status
 
 ###建立服務（Services）
 
-啟動 *redis* 服務 : 
+啟動 *redis* 服務 :
 
 ```
 $ swarmctl service create --name redis --image redis:3.0.5
 89831rq7oplzp6oqcqoswquf2
 ```
 
-列出正在執行的服務 : 
+列出正在執行的服務 :
 
 ```
 $ swarmctl service ls
@@ -133,7 +134,7 @@ ID                         Name   Image        Replicas
 89831rq7oplzp6oqcqoswquf2  redis  redis:3.0.5  1
 ```
 
-檢視服務 : 
+檢視服務 :
 
 ```
 $ swarmctl service inspect redis
@@ -146,7 +147,7 @@ Template
 
 Task ID                      Service    Instance    Image          Desired State    Last State               Node
 -------                      -------    --------    -----          -------------    ----------               ----
-0dsiq9za9at3cqk4qx07n6v8j    redis      1           redis:3.0.5    RUNNING          RUNNING 2 seconds ago 
+0dsiq9za9at3cqk4qx07n6v8j    redis      1           redis:3.0.5    RUNNING          RUNNING 2 seconds ago
 ```
 
 ###更新服務
@@ -181,7 +182,7 @@ ceuwhcffcavur7k9q57vqw0zg    redis      4           redis:3.0.5    RUNNING      
 
 也可以改變其他的參數，如 image 、 args 、 env ...等
 
-這裡將更改 image 由 redis:3.0.5 升級到 redis:3.0.6 
+這裡將更改 image 由 redis:3.0.5 升級到 redis:3.0.6
 
 ```
 $ swarmctl service update redis --image redis:3.0.6
@@ -226,7 +227,7 @@ $ watch -n1 "swarmctl service inspect redis"  # watch the update
 
 使用者也可以手動定義可使用的節點，或者設定節點狀態為停止或排除。
 
-這裡讓我們把 `node-1` 改成維修模式 : 
+這裡讓我們把 `node-1` 改成維修模式 :
 
 ```
 $ swarmctl node drain node-1
