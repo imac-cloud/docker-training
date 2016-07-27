@@ -1,7 +1,4 @@
-# Kubernetes 安裝與操作
-Kubernetes 是 Google 的容器叢集管理系統，是一個開放式原始碼，主要提供應用程式部署、快速的擴展與系統自動維護等功能，Kubernetes讓IT人員可以跨主機執行 Docker 化的應用程式。
-
-## Ubuntu Kubernetes 安裝
+# Deploying Kubernetes on Ubuntu Bare Metal
 Kubernetes 提供了許多雲端平台與作業系統的安裝方式，本章將針對 Ubuntu 進行部署教學，若想要瞭解更多平台的部署可以參考 [Creating a Kubernetes Cluster](http://kubernetes.io/v1.1/docs/getting-started-guides/README.html)。首先安裝前我們要確認以下四項都已將準備完成：
 * 所有節點需安裝```docker```版本 1.2+，以及安裝```bridge-utils```。
 
@@ -106,7 +103,7 @@ $ kubectl expose rc nginx --port=80 --container-port=80 --external-ip=172.16.1.2
 
 最後因為上述使用```NodePort```，若沒指定 port 會亂數使用一個數值（預設為部署時設定的範圍），由於不知道 port 為多少故需要透過指令查詢：
 ```sh
-$ kubectl get svc nginx -o json 
+$ kubectl get svc nginx -o json
 ```
 
 若要刪除```svc```、```rc```與```pods```可以使用以下方式：
