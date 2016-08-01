@@ -29,5 +29,5 @@ Docker Engine 1.12 包含了 Swarm mode ，可提供本機管理 Docker Engines 
 
 ## Swarm 實作
 
-* [環境建置](https://github.com/imac-cloud/docker-tutorial/tree/dev/docker/docker-1.12/Swarm/Installation)
-* [佈署應用服務](https://github.com/imac-cloud/docker-tutorial/tree/dev/docker/docker-1.12/Swarm/Service)
+* [環境建置](https://github.com/imac-cloud/docker-tutorial/tree/dev/docker/docker-1.12/swarm/installation)
+* [佈署應用服務](https://github.com/imac-cloud/docker-tutorial/tree/dev/docker/docker-1.12/swarm/service)
