@@ -50,7 +50,7 @@ kontena grid create imac
 
 ###Step 5. 安裝 Kontena Nodes
 
-你需要一個以上的 Kontena Nodes 執行工作負載，以下提供你一個簡單的 [Kontena Nodes 安裝](../node/README.md)方式。
+你需要一個以上的 Kontena Nodes 執行工作負載，以下提供你一個簡單的 [Kontena Nodes 安裝](../nodes/README.md)方式。
 
 ###Step 6. 開始你 Kontena 第一個操作！
 
